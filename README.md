@@ -6,21 +6,26 @@
 #install pyenv
 curl https://pyenv.run | bash
 
+# setting python version
 pyenv local 3.12.11
 
+# enabling venv 
 python -m venv .venv
 
+# Activating specific python version
 source .venv/bin/activate
 
+# Deactivating local version
 #deactivate
 
-#poetry
+# Install poetry
 curl -sSL https://install.python-poetry.org | python3 -
 
+#install version
 poetry install
 ```
 
-## Shared source code
+## Shared source code (Monolith Arch)
 
 ```sh
 
@@ -34,7 +39,7 @@ watch -n 1  python3 -m src.producer
 celery -A src.celery_app worker --loglevel=INFO
 ```
 
-## Micro service simulations
+## Micro Service simulations
 
 ```sh
 # Order service produce message
