@@ -1,0 +1,10 @@
+.docker
+.venv
+__pycache__
+env
+venv
+*.pyc
+*.pyo
+*.pyd
+.Python
+celerybeat-schedule
